@@ -4,16 +4,21 @@ from typing import List, Optional
 
 from app.services.ledger import ledger
 from app.services.retrieval import EvidenceRetriever
+from app.services.validator import EvidenceValidator
 from app.services.planner import QueryPlanner
+from app.services.timeline import TimelineService
 from app.models.evidence import EvidenceRecord
 from pydantic import BaseModel
 from app.models.reasoning import MissionReasoningResult
+from app.models.timeline import TimelineEvent
 
 class QueryRequest(BaseModel):
     query: str
 
 retriever = EvidenceRetriever(ledger)
-planner = QueryPlanner(retriever)
+validator = EvidenceValidator(ledger)
+planner = QueryPlanner(retriever, validator)
+timeline_svc = TimelineService(ledger)
 
 app = FastAPI(title="MissionTrace API")
 
@@ -48,4 +53,12 @@ def get_evidence_by_id(evidence_id: str):
 @app.post("/api/query", response_model=MissionReasoningResult)
 def query_mission(req: QueryRequest):
     return planner.handle_query(req.query)
+
+@app.get("/api/timeline", response_model=List[TimelineEvent])
+def get_timeline():
+    return timeline_svc.generate_timeline()
+
+@app.get("/api/timeline/{incident_id}", response_model=List[TimelineEvent])
+def get_timeline_for_incident(incident_id: str):
+    return timeline_svc.generate_timeline(incident_id)
 
