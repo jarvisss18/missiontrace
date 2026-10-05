@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "label": "SYNTHETIC DEMO DATA",
+    "description": "Synthetic mission telemetry for demonstration purposes."
+  },
+  "records": [
+    {
+      "timestamp": "2026-10-05T04:10:00Z",
+      "satellite_id": "ST-10",
+      "subsystem": "EPS",
+      "parameter": "BATT_V_A",
+      "value": 28.5,
+      "unit": "V",
+      "quality": "VALID"
+    },
+    {
+      "timestamp": "2026-10-05T04:11:00Z",
+      "satellite_id": "ST-10",
+      "subsystem": "EPS",
+      "parameter": "BATT_V_A",
+      "value": 28.1,
+      "unit": "V",
+      "quality": "VALID"
+    },
+    {
+      "timestamp": "2026-10-05T04:12:07Z",
+      "satellite_id": "ST-10",
+      "subsystem": "EPS",
+      "parameter": "BATT_V_A",
+      "value": 26.1,
+      "unit": "V",
+      "quality": "VALID"
+    },
+    {
+      "timestamp": "2026-10-05T04:13:00Z",
+      "satellite_id": "ST-10",
+      "subsystem": "EPS",
+      "parameter": "BATT_V_A",
+      "value": 25.8,
+      "unit": "V",
+      "quality": "VALID"
+    },
+    {
+      "timestamp": "2026-10-05T04:14:00Z",
+      "satellite_id": "ST-10",
+      "subsystem": "EPS",
+      "parameter": "BATT_V_A",
+      "value": 25.4,
+      "unit": "V",
+      "quality": "VALID"
+    },
+    {
+      "timestamp": "2026-10-05T04:12:08Z",
+      "satellite_id": "ST-10",
+      "subsystem": "AOCS",
+      "parameter": "SUN_SENSOR_1",
+      "value": 0.0,
+      "unit": "W/m2",
+      "quality": "VALID"
+    },
+    {
+      "timestamp": "2026-10-05T04:12:08Z",
+      "satellite_id": "ST-10",
+      "subsystem": "AOCS",
+      "parameter": "SUN_SENSOR_2",
+      "value": 0.0,
+      "unit": "W/m2",
+      "quality": "VALID"
+    },
+    {
+      "timestamp": "2026-10-05T04:21:00Z",
+      "satellite_id": "ST-10",
+      "subsystem": "EPS",
+      "parameter": "SA_I",
+      "value": 0.0,
+      "unit": "A",
+      "quality": "MISSING"
+    },
+    {
+      "timestamp": "2026-10-05T04:25:00Z",
+      "satellite_id": "ST-10",
+      "subsystem": "EPS",
+      "parameter": "SA_I",
+      "value": 4.2,
+      "unit": "A",
+      "quality": "VALID"
+    },
+    {
+      "timestamp": "2026-10-05T05:00:00Z",
+      "satellite_id": "ST-10",
+      "subsystem": "THERMAL",
+      "parameter": "TEMP_EXT_1",
+      "value": -40.0,
+      "unit": "C",
+      "quality": "CONFLICTING"
+    },
+    {
+      "timestamp": "2026-10-05T05:00:00Z",
+      "satellite_id": "ST-10",
+      "subsystem": "THERMAL",
+      "parameter": "TEMP_EXT_1_RED",
+      "value": 15.0,
+      "unit": "C",
+      "quality": "CONFLICTING"
+    }
+  ]
+}

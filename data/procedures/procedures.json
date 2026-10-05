@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "label": "SYNTHETIC DEMO DATA",
+    "description": "Synthetic mission procedures for demonstration purposes."
+  },
+  "records": [
+    {
+      "procedure_id": "EPS-DIAG-03",
+      "title": "Solar Array Degradation Diagnosis",
+      "section": "§4.2",
+      "version": "v7",
+      "instructions": [
+        {
+          "step": 1,
+          "description": "Verify BATT_V_A and BATT_V_B levels."
+        },
+        {
+          "step": 2,
+          "description": "Check if anomaly coincides with planned eclipse entry (verify sun sensor records)."
+        },
+        {
+          "step": 3,
+          "description": "Compare array current (SA_I) with orbit-phase prediction model to confirm degradation."
+        }
+      ]
+    },
+    {
+      "procedure_id": "THERMAL-REC-01",
+      "title": "Thermal Sensor Anomaly Resolution",
+      "section": "§2.1",
+      "version": "v2",
+      "instructions": [
+        {
+          "step": 1,
+          "description": "Cross-check primary thermal sensor with redundant sensor."
+        },
+        {
+          "step": 2,
+          "description": "If discrepancy > 5C, flag primary sensor for manual review."
+        }
+      ]
+    }
+  ]
+}

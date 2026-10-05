@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "label": "SYNTHETIC DEMO DATA",
+    "description": "Synthetic mission logs for demonstration purposes."
+  },
+  "records": [
+    {
+      "timestamp": "2026-10-05T04:10:00Z",
+      "log_id": "LOG-1001",
+      "severity": "INFO",
+      "subsystem": "SYS",
+      "message": "Routine nominal operations heartbeat."
+    },
+    {
+      "timestamp": "2026-10-05T04:12:09Z",
+      "log_id": "LOG-1002",
+      "severity": "WARNING",
+      "subsystem": "EPS",
+      "message": "EPS_UV_WARN: Battery A voltage dropped below 26.5V threshold."
+    },
+    {
+      "timestamp": "2026-10-05T04:12:15Z",
+      "log_id": "LOG-1003",
+      "severity": "INFO",
+      "subsystem": "AOCS",
+      "message": "Eclipse entry detected. Sun sensors indicate 0 illumination."
+    },
+    {
+      "timestamp": "2026-10-05T04:20:00Z",
+      "log_id": "LOG-1004",
+      "severity": "CRITICAL",
+      "subsystem": "COMM",
+      "message": "Telemetry link interrupted. AOS expected at 04:24Z."
+    }
+  ]
+}

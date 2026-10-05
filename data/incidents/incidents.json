@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "label": "SYNTHETIC DEMO DATA",
+    "description": "Synthetic historical incidents for demonstration purposes."
+  },
+  "records": [
+    {
+      "incident_id": "INC-2025-042",
+      "timestamp": "2025-06-12T18:00:00Z",
+      "subsystem": "EPS",
+      "description": "Unexpected battery voltage drop originally flagged as degradation. Later confirmed to be nominal eclipse entry misaligned with predictive model.",
+      "resolution": "Updated predictive thermal/eclipse model. No hardware degradation."
+    },
+    {
+      "incident_id": "INC-2023-018",
+      "timestamp": "2023-02-14T02:30:00Z",
+      "subsystem": "THERMAL",
+      "description": "False positive on TEMP_EXT_1 causing automatic heater triggers.",
+      "resolution": "Redundant sensor TEMP_EXT_1_RED was selected as primary. Primary sensor confirmed faulty."
+    }
+  ]
+}
