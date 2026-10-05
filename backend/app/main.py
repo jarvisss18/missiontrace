@@ -4,9 +4,16 @@ from typing import List, Optional
 
 from app.services.ledger import ledger
 from app.services.retrieval import EvidenceRetriever
+from app.services.planner import QueryPlanner
 from app.models.evidence import EvidenceRecord
+from pydantic import BaseModel
+from app.models.reasoning import MissionReasoningResult
+
+class QueryRequest(BaseModel):
+    query: str
 
 retriever = EvidenceRetriever(ledger)
+planner = QueryPlanner(retriever)
 
 app = FastAPI(title="MissionTrace API")
 
@@ -37,4 +44,8 @@ def get_evidence_by_id(evidence_id: str):
     if not record:
         raise HTTPException(status_code=404, detail="Evidence not found")
     return record
+
+@app.post("/api/query", response_model=MissionReasoningResult)
+def query_mission(req: QueryRequest):
+    return planner.handle_query(req.query)
 
